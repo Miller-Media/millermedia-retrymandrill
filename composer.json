@@ -1,0 +1,11 @@
+{
+    "name": "millermedia/retrymandrill",
+    "description": "retry-emails-with-mandrill",
+    "type": "project",
+    "require": {},
+	"autoload": {
+		"psr-4": {
+		  "MillerMedia\\RetryMandrill\\": "classes/"
+		}
+	}
+}
