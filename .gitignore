@@ -1,3 +1,4 @@
 bin/
 tests/test-sample.php
 vendor/
+data/annotations/*
