@@ -3,8 +3,11 @@ return <<<'JSON'
 {
     "vendor": "Miller Media",
     "namespace": "MillerMedia\\RetryMandrill",
-    "name": "retry-emails-with-mandrill",
+    "name": "Retry Emails (Send Emails with Mandrill extension)",
     "slug": "millermedia-retrymandrill",
-    "version": "1.0.0"
+    "version": "1.0.1",
+    "description": "Queues up failed Mandrill API calls by queuing",
+    "author": "Miller Media",
+    "author_url": "http:\/\/www.millermedia.io"
 }
 JSON;
