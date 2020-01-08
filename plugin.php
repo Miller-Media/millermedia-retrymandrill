@@ -1,10 +1,9 @@
 <?php
 /**
- * Plugin Name: retry-emails-with-mandrill
- * Plugin URI: 
- * Description: 
- * Author: 
- * Author URI: 
+ * Plugin Name: Retry Emails (Send Emails with Mandrill extension)
+ * Description: Queues up failed Mandrill API calls by queuing 
+ * Author: Miller Media
+ * Author URI: www.millermedia.io
  * Version: 1.0.0
  */
  
