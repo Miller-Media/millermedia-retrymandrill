@@ -4,7 +4,7 @@
  * Description: Queues up failed Mandrill API calls by queuing 
  * Author: Miller Media
  * Author URI: www.millermedia.io
- * Version: 1.0.1
+ * Version: 1.0.2
  */
  
 if ( ! defined( 'ABSPATH' ) ) {

@@ -5,7 +5,7 @@ return <<<'JSON'
     "namespace": "MillerMedia\\RetryMandrill",
     "name": "Retry Emails (Send Emails with Mandrill extension)",
     "slug": "millermedia-retrymandrill",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Queues up failed Mandrill API calls by queuing",
     "author": "Miller Media",
     "author_url": "http:\/\/www.millermedia.io"
