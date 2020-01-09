@@ -58,7 +58,6 @@ class Plugin extends \MWP\Framework\Plugin
 	 */
 	public function queueMandrillEmail( $to, $subject, $message, $headers, $attachments )
 	{
-		print_r( "Queueing task" );
 		Task::queueTask([
 			'action' => 'send_queued_mandrill_email',
 			'next_start' => time() + ( 60 * 5 ),
