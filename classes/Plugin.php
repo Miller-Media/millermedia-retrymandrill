@@ -91,9 +91,10 @@ class Plugin extends \MWP\Framework\Plugin
 		$message = $task->getData('message');
 		$headers = $task->getData('headers');
 		$attachments = $task->getData('attachments');
+		//declaring the $response here so that it can be used within the exception block as well
+		$response = \wpMandrill::mail( $to, $subject, $message, $headers, $attachments );
 
 		try {
-			$response = \wpMandrill::mail( $to, $subject, $message, $headers, $attachments );
 			\wpMandrill::evaluate_response( $response );
 			$task->log('Mail sent successfully.');
 			$task->setData('mandrill_response', $response);
@@ -106,6 +107,12 @@ class Plugin extends \MWP\Framework\Plugin
 			if ( $task->getData('retried') >= 5 ) {
 				$task->log('Stopped after ' . $task->getData('retried') . ' tries.');
 				$task->setData('retried', 0);
+				return $task->abort();
+			}
+
+			// if the status of one of these messages is rejected/invalid then the task will be aborted
+			if('rejected' === $response[0]['status'] || 'invalid' === $response[0]['status']){
+				$task->log('Rejected or Invalid messages are aborted');
 				return $task->abort();
 			}
 
